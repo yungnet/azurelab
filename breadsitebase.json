@@ -1,6 +1,6 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-    "contentVersion": "1.0.0.0",
+    "contentVersion": "1.0.0.1",
     "parameters": {
         "virtualMachines_BreadSiteVM_name": {
             "defaultValue": "BreadSiteVM",
@@ -32,7 +32,8 @@
             "location": "[resourceGroup().location]",
             "tags": {
                 "project": "test1",
-                "dept": "bread"
+                "dept": "bread",
+                "BreadSite": "[resourceGroup().location]"
             },
             "properties": {
                 "securityRules": []
